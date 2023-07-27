@@ -4,7 +4,9 @@ const User = require('../modals/user')
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const JWT_SECRET = 'MusicApplication';
+const dotenv = require('dotenv');
+dotenv.config();
+const JWT_SECRET = process.env.JWT_SECRET
 const fetchuser = require('../middleware/fetchuser')
 
 
