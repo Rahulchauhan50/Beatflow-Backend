@@ -6,9 +6,9 @@ const UserShema = mongoose.Schema({
         type:String,
         required:true
     },
-    phoneNumber:{
-        type:Number,
-        required:true
+    profileImage:{
+        type:String,
+        default:null
     },
     email:{
         type:String,
