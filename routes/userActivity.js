@@ -126,7 +126,7 @@ router.post('/add-favArtist',fetchuser,async(req,res)=>{
                 
                 if(existingSongIndex < 0){
                 
-                existingData.FavArtists.push({title, subTitle, image, ArtistId});
+                existingData.FavArtists.unshift({title, subTitle, image, ArtistId});
                 const updatedData = await existingData.save();
                 res.json({ updatedData });
                 }else{
