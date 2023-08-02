@@ -24,7 +24,7 @@ router.post('/add-favsongs',fetchuser,async(req,res)=>{
                 (song) => song.hub.actions[1].uri === uri);
 
             if(existingSongIndex < 0){
-            existingData.FavSongs.push({
+            existingData.FavSongs.unshift({
                 title,
                 key,
                 subtitle,
